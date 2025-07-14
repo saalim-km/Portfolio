@@ -40,7 +40,7 @@ export default function PortfolioHero() {
 
           {/* Title (Animated Word-by-Word) */}
           <motion.div
-            className="text-white xl:text-[64px] lg:text-[60px] md:text-[60px] sm:text-[50px] text-[35px] leading-[1.1] tracking-tight font-semibold flex flex-wrap justify-center gap-x-2 mt-2"
+            className="text-white xl:text-[64px] lg:text-[60px] md:text-[60px] sm:text-[50px] text-[35px] leading-[1.1] tracking-tight  flex flex-wrap justify-center gap-x-2 mt-2"
             initial="hidden"
             animate="visible"
             variants={{
@@ -68,7 +68,7 @@ export default function PortfolioHero() {
 
           {/* Subtitle (Animated Word-by-Word) */}
           <motion.div
-            className="xl:text-[64px] lg:text-[60px] md:text-[60px] sm:text-[50px] text-[35px] font-semibold leading-[1] tracking-tight mb-3 text-white flex flex-wrap justify-center gap-x-2"
+            className="xl:text-[64px] lg:text-[60px] md:text-[60px] sm:text-[50px] text-[35px]  leading-[1] tracking-tight mb-3 text-white flex flex-wrap justify-center gap-x-2"
             initial="hidden"
             animate="visible"
             variants={{
@@ -96,7 +96,7 @@ export default function PortfolioHero() {
 
           {/* Description */}
           <p
-            className="text-white/70 mb-4 mx-auto font-semibold text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[20px] 
+            className="text-white/70 mb-4 mx-auto  text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[20px] 
               max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl xl:max-w-2xl"
           >
             Hi, I'm <span className="text-white font-medium">Salim</span> — a
