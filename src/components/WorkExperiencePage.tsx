@@ -3,8 +3,8 @@ import WorkExperienceSection, { type WorkExperience } from "./WorkExperience";
 const workExperiences: WorkExperience[] = [
   {
     id: "packapeer-academy",
-    company: "Packapeer Academy",
-    position: "Professional Development Program",
+    company: "Brototype (Packapeer Academy Private Limited)",
+    position: "Full-Stack Web Development Bootcamp",
     duration: "June 2024 – Present",
     logoText: "P",
     logoBgColor: "bg-orange-500",
@@ -26,6 +26,9 @@ const workExperiences: WorkExperience[] = [
       { key: "redux" },
       { key: "firebase" },
       { key: "git" },
+      {key : 'c'},
+      {key : 'java'},
+      {key : 'postgresql'}
     ],
   },
 ];

@@ -114,7 +114,32 @@ const TechStackGrid = ({ techStack }: { techStack: TechStackItem[] }) => {
   return (
     <div className="w-full">
       <h2 className="text-2xl text-white mb-6">Tech Stack</h2>
-      <div className="grid grid-cols-2 gap-3">
+      {/* Mobile/Tablet: Horizontal wrap layout */}
+      <div className="lg:hidden flex flex-wrap gap-3">
+        {techStack.map((tech, index) => {
+          const techInfo = techIcons[tech.key];
+          return (
+            <div
+              key={index}
+              className="flex items-center gap-3 px-4 py-2 bg-white/5 hover:bg-white/10 transition-colors rounded-lg"
+            >
+              <div className="w-10 h-10 flex items-center justify-center flex-shrink-0">
+                <img
+                  src={techInfo.icon}
+                  alt={techInfo.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="text-white font-medium text-sm whitespace-nowrap">
+                {techInfo.name}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Desktop: Grid layout */}
+      <div className="hidden lg:grid grid-cols-2 gap-3">
         {techStack.map((tech, index) => {
           const techInfo = techIcons[tech.key];
           return (
@@ -126,7 +151,7 @@ const TechStackGrid = ({ techStack }: { techStack: TechStackItem[] }) => {
                 <img
                   src={techInfo.icon}
                   alt={techInfo.name}
-                  className="w-full h-full object-cover rounded-md"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <span className="text-white font-medium text-base whitespace-nowrap">
@@ -146,50 +171,61 @@ const TimelineExperience = ({
   experiences: WorkExperience[];
 }) => {
   return (
-    <div className="relative">
-      {experiences.map((experience, index) => (
-        <div key={experience.id} className="relative mb-12 last:mb-0">
-          {/* Company header with logo */}
-          <div className="flex items-start mb-6">
-            <div className="flex flex-col items-center mr-6">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
-                <img
-                  src={experience.companyLogo}
-                  alt={experience.company}
-                  className=" object-contain"
-                />
-              </div>
-              {index < experiences.length - 1 && (
-                <div className="w-0.5 bg-gray-600 h-20 mt-4"></div>
-              )}
-            </div>
-
-            <div className="flex-1 min-w-0">
-              <h3 className="text-xl text-white mb-1">
-                {experience.company}
-              </h3>
-              <p className="text-blue-400 font-medium text-sm">
-                {experience.position} | {experience.duration}
-              </p>
-            </div>
-          </div>
-
-          {/* Description with vertical timeline */}
-          <div className="relative ml-6">
-            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-white"></div>
-            <div className="space-y-6">
-              {experience.description.map((desc, descIndex) => (
-                <div key={descIndex} className="relative flex items-start">
-                  <div className="absolute -left-2 w-4 h-4 bg-white rounded-full"></div>
-                  <div className="ml-8">
-                    <p className="text-white leading-relaxed text-lg">{desc}</p>
-                  </div>
+    <div className="flex flex-col">
+      <div className="relative">
+        {experiences.map((experience, index) => (
+          <div key={experience.id} className="relative mb-12 last:mb-0">
+            {/* Company header with logo */}
+            <div className="flex items-start mb-6">
+              <div className="flex flex-col items-center mr-6">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                  <img
+                    src={experience.companyLogo}
+                    alt={experience.company}
+                    className=" object-contain"
+                  />
                 </div>
-              ))}
+                {index < experiences.length - 1 && (
+                  <div className="w-0.5 bg-gray-600 h-20 mt-4"></div>
+                )}
+              </div>
+
+              <div className="flex-1 min-w-0">
+                <h3 className="text-xl text-white mb-1 font-medium">
+                  {experience.company}
+                </h3>
+                <p className="text-blue-500 text-sm">
+                  {experience.position} | {experience.duration}
+                </p>
+              </div>
+            </div>
+
+            {/* Description with vertical timeline */}
+            <div className="relative ml-6">
+              <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-white"></div>
+              <div className="space-y-6">
+                {experience.description.map((desc, descIndex) => (
+                  <div key={descIndex} className="relative flex items-start">
+                    <div className="absolute -left-2 w-4 h-4 bg-white rounded-full"></div>
+                    <div className="ml-8">
+                      <p className="text-white leading-relaxed text-md">
+                        {desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      <div>
+        <img
+          src="devices.svg"
+          alt="Timeline Decoration"
+          className=""
+        />
+      </div>
     </div>
   );
 };
