@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Footer from "./components/Footer";
 import PortfolioHero from "./components/Hero";
 import Projects from "./components/Projects";
 import WorkExperiencePage from "./components/WorkExperiencePage";
@@ -17,6 +18,7 @@ const App = () => {
       </div>
       <About/>
       <Projects/>
+      <Footer/>
     </>
   );
 };
