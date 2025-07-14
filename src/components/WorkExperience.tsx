@@ -219,13 +219,6 @@ const TimelineExperience = ({
           </div>
         ))}
       </div>
-      <div>
-        <img
-          src="devices.svg"
-          alt="Timeline Decoration"
-          className=""
-        />
-      </div>
     </div>
   );
 };

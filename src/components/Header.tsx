@@ -11,7 +11,7 @@ export default function Header() {
         <div className="flex items-center gap-2.5">
           {/* LinkedIn SVG */}
           <a
-            href="https://www.linkedin.com/in/salim-k-m-3ab7ba246/"
+            href="https://www.linkedin.com/in/salim-k-m-3ab7ba246"
             className="text-white hover:bg-blue-400 transition-colors cursor-pointer rounded-full bg-white/10 p-1.5 flex justify-center items-center "
             aria-label="LinkedIn"
           >
