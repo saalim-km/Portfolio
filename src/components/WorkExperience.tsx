@@ -1,69 +1,91 @@
+import React from "react";
+
 // Tech stack with high-quality icons matching the reference image
 const techIcons = {
   nodejs: {
     name: "Node.js",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-    bgColor: "bg-green-600",
+    icon: "https://www.mjawadzaiter.dev/tech-logos/node.svg",
+    bgColor: "",
   },
   react: {
     name: "React",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    bgColor: "bg-blue-500",
+    bgColor: "",
   },
   mongodb: {
     name: "MongoDB",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
-    bgColor: "bg-green-500",
+    bgColor: "",
   },
   typescript: {
     name: "TypeScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-    bgColor: "bg-blue-600",
+    bgColor: "",
   },
   c: {
     name: "C",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
-    bgColor: "bg-blue-700",
+    bgColor: "",
   },
   java: {
     name: "Java",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
-    bgColor: "bg-red-600",
+    bgColor: "",
   },
   javascript: {
     name: "JavaScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-    bgColor: "bg-yellow-500",
+    bgColor: "",
   },
   express: {
     name: "Express.js",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
-    bgColor: "bg-gray-600",
+    icon: "https://www.mjawadzaiter.dev/tech-logos/express.png",
+    bgColor: "",
   },
   postgresql: {
     name: "PostgreSQL",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-    bgColor: "bg-blue-800",
+    bgColor: "",
   },
   redux: {
     name: "Redux",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
-    bgColor: "bg-purple-600",
+    bgColor: "",
   },
   nextjs: {
     name: "Next.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-    bgColor: "bg-black",
+    bgColor: "",
   },
   firebase: {
     name: "Firebase",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
-    bgColor: "bg-orange-500",
+    bgColor: "",
   },
   git: {
     name: "Git",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
-    bgColor: "bg-red-500",
+    bgColor: "",
+  },
+  dotnet: {
+    name: ".NET Core",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg",
+    bgColor: "",
+  },
+  csharp: {
+    name: "C#",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
+    bgColor: "bg-purple-600",
+  },
+  sqlserver: {
+    name: "SQL Server",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+    bgColor: "",
+  },
+  ffmpeg: {
+    name: "FFmpeg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+    bgColor: "",
   },
 };
 
@@ -78,7 +100,7 @@ export interface WorkExperience {
   duration: string;
   description: string[];
   techStack: TechStackItem[];
-  companyLogo?: string;
+  companyLogo: string;
   logoText?: string;
   logoBgColor?: string;
   logoTextColor?: string;
@@ -91,25 +113,23 @@ interface WorkExperienceSectionProps {
 const TechStackGrid = ({ techStack }: { techStack: TechStackItem[] }) => {
   return (
     <div className="w-full">
-      <h2 className="text-2xl text-white mb-8">Tech Stack</h2>
-      <div className="grid grid-cols-2 gap-4">
+      <h2 className="text-2xl text-white mb-6">Tech Stack</h2>
+      <div className="grid grid-cols-2 gap-3">
         {techStack.map((tech, index) => {
           const techInfo = techIcons[tech.key];
           return (
             <div
               key={index}
-              className="flex items-center gap-4 p-4 bg-white/5 rounded-lg border"
+              className="flex items-center gap-4 p-3 bg-white/5 hover:bg-white/10 transition-colors rounded-lg"
             >
-              <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
+              <div className="w-14 h-14 flex items-center justify-center flex-shrink-0">
                 <img
-                  src={techInfo.icon || "/placeholder.svg"}
+                  src={techInfo.icon}
                   alt={techInfo.name}
-                  width={48}
-                  height={48}
-                  className="w-12 h-12 object-contain"
+                  className="w-full h-full object-cover rounded-md"
                 />
               </div>
-              <span className="text-white font-medium text-lg">
+              <span className="text-white font-medium text-base whitespace-nowrap">
                 {techInfo.name}
               </span>
             </div>
@@ -128,27 +148,27 @@ const TimelineExperience = ({
   return (
     <div className="relative">
       {experiences.map((experience, index) => (
-        <div key={experience.id} className="relative mb-16">
+        <div key={experience.id} className="relative mb-12 last:mb-0">
           {/* Company header with logo */}
-          <div className="flex items-start mb-8">
-            <div className="flex flex-col items-center mr-8">
-              <div
-                className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                  experience.logoBgColor || "bg-orange-500"
-                } text-white font-bold text-lg`}
-              >
-                {experience.logoText || experience.company.charAt(0)}
+          <div className="flex items-start mb-6">
+            <div className="flex flex-col items-center mr-6">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                <img
+                  src={experience.companyLogo}
+                  alt={experience.company}
+                  className=" object-contain"
+                />
               </div>
               {index < experiences.length - 1 && (
-                <div className="w-0.5 bg-white h-16 mt-4"></div>
+                <div className="w-0.5 bg-gray-600 h-20 mt-4"></div>
               )}
             </div>
 
-            <div className="flex-1">
-              <h3 className="text-2xl font-bold text-white">
+            <div className="flex-1 min-w-0">
+              <h3 className="text-xl text-white mb-1">
                 {experience.company}
               </h3>
-              <p className="text-blue-500 font-medium ">
+              <p className="text-blue-400 font-medium text-sm">
                 {experience.position} | {experience.duration}
               </p>
             </div>
@@ -177,20 +197,74 @@ const TimelineExperience = ({
 export default function WorkExperienceSection({
   experiences,
 }: WorkExperienceSectionProps) {
-  return (
-    <div className="min-h-screen bg-black py-16 px-8 flex items-center justify-center">
-      <div className="max-w-7xl">
-        <h1 className="text-6xl text-white text-left mb-20">Work Experience</h1>
+  // Sample data for demonstration
+  const sampleExperiences: WorkExperience[] = experiences || [
+    {
+      id: "1",
+      company: "Alpha Technology Group",
+      position: "Full-Stack Developer",
+      duration: "Sep 2024 - Now",
+      description: [
+        "Maintained a 100,000+ line .NET Core codebase, focusing on debugging critical issues and managing interactions with the SQL Server database.",
+        "Integrated new features into the .NET Core application, including advanced email and push notification capabilities using Firebase.",
+        "Created a sample project that utilizes FFmpeg and Node.js to efficiently process and merge videos.",
+      ],
+      techStack: [
+        { key: "dotnet" },
+        { key: "csharp" },
+        { key: "ffmpeg" },
+        { key: "nodejs" },
+        { key: "sqlserver" },
+        { key: "firebase" },
+        { key: "express" },
+        { key: "nextjs" },
+        { key: "typescript" },
+        { key: "git" },
+      ],
+      companyLogo: "/api/placeholder/48/48",
+    },
+    {
+      id: "2",
+      company: "Freelance",
+      position: "Software Engineer",
+      duration: "Aug 2023 - Now",
+      description: [
+        "Developed a full-stack Next.js website with Strapi CMS and PostgreSQL for a mental services Canadian organization.",
+        "Built responsive web applications using modern React patterns and TypeScript.",
+        "Implemented RESTful APIs and database optimization strategies.",
+      ],
+      techStack: [
+        { key: "nextjs" },
+        { key: "react" },
+        { key: "typescript" },
+        { key: "postgresql" },
+        { key: "nodejs" },
+        { key: "git" },
+      ],
+      companyLogo: "/api/placeholder/48/48",
+    },
+  ];
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+  return (
+    <div className="min-h-screen bg-black py-8 px-4 sm:py-12 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white mb-8 sm:mb-12 lg:mb-16">
+          Work Experience
+        </h1>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left side - Timeline */}
-          <div className="lg:col-span-2">
-            <TimelineExperience experiences={experiences} />
+          <div className="lg:pr-8">
+            <TimelineExperience experiences={sampleExperiences} />
           </div>
 
           {/* Right side - Tech Stack */}
-          <div className="lg:col-span-1 ">
-            <TechStackGrid techStack={experiences[0]?.techStack || []} />
+          <div className="lg:pl-8">
+            <div className="lg:sticky lg:top-8">
+              <TechStackGrid
+                techStack={sampleExperiences[0]?.techStack || []}
+              />
+            </div>
           </div>
         </div>
       </div>
