@@ -1,4 +1,3 @@
-import React from "react";
 
 // Tech stack with high-quality icons matching the reference image
 const techIcons = {

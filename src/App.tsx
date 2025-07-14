@@ -1,5 +1,6 @@
 import About from "./components/About";
 import PortfolioHero from "./components/Hero";
+import Projects from "./components/Projects";
 import WorkExperiencePage from "./components/WorkExperiencePage";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         />
       </div>
       <About/>
+      <Projects/>
     </>
   );
 };

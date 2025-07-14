@@ -1,4 +1,3 @@
-
 function About() {
   return (
     <div className="py-6 md:py-10 relative text-white">
@@ -11,13 +10,14 @@ function About() {
         <h2 className="text-2xl sm:text-3xl 2xl:text-4xl text-center font-semibold">
           Hi, I'm Salim K M. Nice to meet you.
         </h2>
-        <p className="sm:w-[60%] text-center mx-auto sm:text-xl 2xl:text-1xl">
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-white text-center">
           Since day one, I’ve been hands-on — freelancing, building with teams,
           and shipping real products across the stack, from polished UIs to
           solid backend systems. I thrive on curiosity, love learning deeply,
           and focus on creating things that solve real problems and leave a
           mark.
         </p>
+
         <a
           href="https://www.linkedin.com/in/salim-k-m-3ab7ba246"
           target="_blank"
