@@ -112,7 +112,7 @@ export default function PortfolioHero() {
             >
               See My Work
             </Button>
-            <a href="/resume.pdf" download>
+            <a href="resume.pdf" download={'resume.pdf'}>
               <Button
                 size="lg"
                 className="bg-transparent text-white hover:bg-white/10 px-8 py-3 text-base flex items-center gap-2 cursor-pointer"
