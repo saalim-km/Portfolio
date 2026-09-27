@@ -6,84 +6,184 @@ const techIcons = {
     icon: "https://www.mjawadzaiter.dev/tech-logos/node.svg",
     bgColor: "",
   },
+
   react: {
     name: "React",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
     bgColor: "",
   },
+
   mongodb: {
     name: "MongoDB",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
     bgColor: "",
   },
+
   typescript: {
     name: "TypeScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
     bgColor: "",
   },
-  c: {
-    name: "C",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
-    bgColor: "",
-  },
-  java: {
-    name: "Java",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
-    bgColor: "",
-  },
+
   javascript: {
     name: "JavaScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
     bgColor: "",
   },
+
+  c: {
+    name: "C",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
+    bgColor: "",
+  },
+
+  java: {
+    name: "Java",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    bgColor: "",
+  },
+
   express: {
     name: "Express.js",
     icon: "https://www.mjawadzaiter.dev/tech-logos/express.png",
     bgColor: "",
   },
+
   postgresql: {
     name: "PostgreSQL",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
     bgColor: "",
   },
+
   redux: {
     name: "Redux",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
     bgColor: "",
   },
+
   nextjs: {
     name: "Next.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
     bgColor: "",
   },
+
   firebase: {
     name: "Firebase",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
     bgColor: "",
   },
+
   git: {
     name: "Git",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
     bgColor: "",
   },
+
   dotnet: {
     name: ".NET Core",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg",
     bgColor: "",
   },
+
   csharp: {
     name: "C#",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
     bgColor: "bg-purple-600",
   },
+
   sqlserver: {
     name: "SQL Server",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
     bgColor: "",
   },
+
+  mssql: {
+    name: "MSSQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+    bgColor: "",
+  },
+
+  golang: {
+    name: "Go",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
+    bgColor: "",
+  },
+
+  gin: {
+    name: "Gin",
+    icon: "https://raw.githubusercontent.com/gin-gonic/logo/master/color.png",
+    bgColor: "",
+  },
+
+  gorm: {
+    name: "GORM",
+    icon: "/gorm.png",
+    bgColor: "",
+  },
+
+  goose: {
+    name: "Goose",
+    icon: "/goose_logo.png",
+    bgColor: "",
+  },
+
+  grc: {
+    name: "GRC",
+    icon: "/grc_icon.svg",
+    bgColor: "",
+  },
+
+  docker: {
+    name: "Docker",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+    bgColor: "",
+  },
+
+  aws: {
+    name: "AWS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+    bgColor: "",
+  },
+
+  redis: {
+    name: "Redis",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
+    bgColor: "",
+  },
+
+  nginx: {
+    name: "Nginx",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg",
+    bgColor: "",
+  },
+
+  githubactions: {
+    name: "GitHub Actions",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg",
+    bgColor: "",
+  },
+
+  jwt: {
+    name: "JWT",
+    icon: "/jwt_logo.svg",
+    bgColor: "",
+  },
+
+  postman: {
+    name: "Postman",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+    bgColor: "",
+  },
+
+  socketio: {
+    name: "Socket.IO",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg",
+    bgColor: "bg-black",
+  },
+
   ffmpeg: {
     name: "FFmpeg",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ffmpeg/ffmpeg-original.svg",
     bgColor: "",
   },
 };
@@ -92,12 +192,20 @@ interface TechStackItem {
   key: keyof typeof techIcons;
 }
 
+export interface EnterpriseModule {
+  title: string;
+  badge: string;
+  description: string;
+  technologies: string[];
+}
+
 export interface WorkExperience {
   id: string;
   company: string;
   position: string;
   duration: string;
   description: string[];
+  modules?: EnterpriseModule[];
   techStack: TechStackItem[];
   companyLogo: string;
   logoText?: string;
@@ -126,7 +234,7 @@ const TechStackGrid = ({ techStack }: { techStack: TechStackItem[] }) => {
                 <img
                   src={techInfo.icon}
                   alt={techInfo.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <span className="text-white font-medium text-sm whitespace-nowrap">
@@ -177,12 +285,28 @@ const TimelineExperience = ({
             {/* Company header with logo */}
             <div className="flex items-start mb-6">
               <div className="flex flex-col items-center mr-6">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
-                  <img
-                    src={experience.companyLogo}
-                    alt={experience.company}
-                    className=" object-contain"
-                  />
+                <div
+                  className={`w-12 h-12 flex items-center justify-center flex-shrink-0 ${
+                    experience.companyLogo
+                      ? "bg-transparent"
+                      : `${experience.logoBgColor || "bg-white/10"} rounded-full overflow-hidden`
+                  }`}
+                >
+                  {experience.companyLogo ? (
+                    <img
+                      src={experience.companyLogo}
+                      alt={experience.company}
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <span
+                      className={`text-lg font-bold ${
+                        experience.logoTextColor || "text-white"
+                      }`}
+                    >
+                      {experience.logoText || experience.company.charAt(0)}
+                    </span>
+                  )}
                 </div>
                 {index < experiences.length - 1 && (
                   <div className="w-0.5 bg-gray-600 h-20 mt-4"></div>
@@ -213,6 +337,57 @@ const TimelineExperience = ({
                     </div>
                   </div>
                 ))}
+
+                {/* Core Enterprise Modules (Apple Minimalist Design) */}
+                {experience.modules && experience.modules.length > 0 && (
+                  <div className="relative flex items-start pt-2">
+                    <div className="absolute -left-2 w-4 h-4 bg-white rounded-full"></div>
+                    <div className="ml-8 w-full">
+                      <div className="mb-4">
+                        <span className="text-xs uppercase tracking-widest text-zinc-400 font-semibold flex items-center gap-2">
+                          Core Enterprise Modules Engineered
+                        </span>
+                        <p className="text-xs text-zinc-500 mt-0.5">
+                          Architected for enterprise-scale B2B compliance &amp; risk governance
+                        </p>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                        {experience.modules.map((mod, modIdx) => (
+                          <div
+                            key={modIdx}
+                            className="group relative rounded-xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300 p-4 flex flex-col justify-between"
+                          >
+                            <div>
+                              <div className="flex items-start justify-between gap-2 mb-2">
+                                <h4 className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">
+                                  {mod.title}
+                                </h4>
+                                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-zinc-300 whitespace-nowrap">
+                                  {mod.badge}
+                                </span>
+                              </div>
+                              <p className="text-xs text-zinc-400 leading-relaxed">
+                                {mod.description}
+                              </p>
+                            </div>
+
+                            <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-white/5">
+                              {mod.technologies.map((tech, tIdx) => (
+                                <span
+                                  key={tIdx}
+                                  className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-zinc-300 border border-white/5"
+                                >
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
