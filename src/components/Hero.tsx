@@ -107,20 +107,35 @@ export default function PortfolioHero() {
           {/* Buttons */}
           <div className="flex flex-row gap-4 justify-center items-center">
             <Button
+              asChild
               size="lg"
               className="bg-transparent border border-white/30 text-white hover:bg-white/10 text-base cursor-pointer"
             >
-              See My Work
-            </Button>
-            <a href="resume.pdf" download={'resume.pdf'}>
-              <Button
-                size="lg"
-                className="bg-transparent text-white hover:bg-white/10 px-8 py-3 text-base flex items-center gap-2 cursor-pointer"
+              <a
+                href="#projects"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const target = document.getElementById("projects");
+                  if (target) {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                  } else {
+                    window.location.hash = "#projects";
+                  }
+                }}
               >
+                See My Work
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              className="bg-transparent text-white hover:bg-white/10 px-8 py-3 text-base flex items-center gap-2 cursor-pointer"
+            >
+              <a href="resume.pdf" download="resume.pdf">
                 <Download className="w-4 h-4 text-blue-500" />
                 Download CV
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
         </div>
       </div>

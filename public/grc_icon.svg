@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="grcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Shield Contour -->
+  <path d="M50 12 L78 22 C78 50 66 74 50 88 C34 74 22 50 22 22 Z" 
+        fill="url(#shieldGrad)" 
+        stroke="url(#grcGrad)" 
+        stroke-width="5" 
+        stroke-linejoin="round"
+        stroke-linecap="round" />
+
+  <!-- Inner Governance & Audit Ring -->
+  <circle cx="50" cy="46" r="18" fill="none" stroke="#60A5FA" stroke-width="2.5" stroke-dasharray="4 3" opacity="0.6" />
+
+  <!-- Verification Checkmark (Compliance) -->
+  <path d="M39 46 L47 54 L62 38" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="5.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Control Nodes (Governance & Risk) -->
+  <circle cx="50" cy="28" r="3.5" fill="#10B981" />
+  <circle cx="68" cy="46" r="3.5" fill="#3B82F6" />
+  <circle cx="32" cy="46" r="3.5" fill="#3B82F6" />
+</svg>
+
